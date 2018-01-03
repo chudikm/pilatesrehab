@@ -1,0 +1,14 @@
+main{
+    padding-top: 10vh;
+}
+
+.card img{
+    height: 400px;
+    width: 100%;
+}
+
+.card{
+    padding:10px;
+    border-radius: 0.40em;
+    border-color:  rgba(127,83,52, 0.3);
+}

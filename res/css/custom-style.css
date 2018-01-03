@@ -4,21 +4,6 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full-slider/blob/master/LICENSE)
  */
 
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
-:root {
-  --font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-.logo-image{
-    width:150px;
-    height:50px
-}
-
-.navbar-brand{
-    padding:0px;
-}
-
 .carousel-item {
   height: calc(100vh - 10vh);
   min-height: 300px;
@@ -30,31 +15,6 @@
 }
 
 
-.nav-link{
-    color:rgb(127,83,52)!important;
-    font-size: 1.2em;
-}
-
-.nav-link:hover{
-    color: rgb(127,83,52);
-    font-weight: bold;
-}
-
-.nav-link.active{
-    background-color: rgb(233,227,18);
-}
-
-body{
-    background-color: rgb(255,255,241);
-    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  
-}
-
-.navbar{
-    background-color: rgb(255,255,241);
-    height: 10vh;
-}
-
 .featurette,.py-5{
     color:rgb(127,83,52)!important;
     border-top: 2px solid white;
@@ -64,9 +24,6 @@ header{
     padding-top: 10vh;
 }
 
-.navbar-dark .navbar-toggler-icon{
-    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(127, 83, 52, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
-}
 
 a.anchor {
     display: block;

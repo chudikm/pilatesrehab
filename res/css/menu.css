@@ -1,0 +1,28 @@
+
+.navbar{
+    background-color: rgb(255,255,241);
+    height: 10vh;
+}
+
+.nav-link{
+    color:rgb(127,83,52)!important;
+    font-size: 1.2em;
+}
+
+.nav-link:hover{
+    color: rgb(127,83,52);
+    font-weight: bold;
+}
+
+.nav-link.active{
+    background-color: rgb(233,227,18);
+}
+
+.logo-image{
+    width:150px;
+    height:50px
+}
+
+.navbar-brand{
+    padding:0px;
+}

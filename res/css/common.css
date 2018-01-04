@@ -35,8 +35,16 @@ body{
 }
 
 
-.featurette,.py-5{
+.py-5{
     color:rgb(127,83,52)!important;
     border-top: 2px solid white;
 }
 
+.featurette{
+    color:rgb(127,83,52)!important;
+    
+}
+
+.modal{
+    color:rgb(127,83,52)!important;
+}

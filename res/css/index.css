@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full-slider/blob/master/LICENSE)
  */
 
+
 .carousel-item {
   height: calc(100vh - 10vh);
   min-height: 300px;
@@ -17,7 +18,7 @@
 
 .featurette,.py-5{
     color:rgb(127,83,52)!important;
-    border-top: 2px solid white;
+    border-top: 2px solid rgb(255,255,241);
 }
 
 header{
@@ -35,7 +36,7 @@ a.anchor {
 .card{
     height: 400px;
     background-size: 100% 100%;
-    border: 1px solid white;
+    border: 1px solid rgb(255,255,241);
     z-index: 1000;
 }
 

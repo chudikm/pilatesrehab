@@ -48,3 +48,7 @@ body{
 .modal{
     color:rgb(127,83,52)!important;
 }
+
+.bold {
+    font-weight: bold;
+}

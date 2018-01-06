@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Pilates Rehab - Ponuka</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./res/vendor/bootstrap/bootstrap.min.css"  rel="stylesheet">
+      
+    <!-- common styles for all pages -->
+    <link href="./res/css/common.css" rel="stylesheet">  
+      
+    <!-- Custom styles for this template -->
+    <link href="./res/css/detail.css" rel="stylesheet">
+      
+      <!-- Custom styles for menu -->
+    <link href="./res/css/menu.css" rel="stylesheet"> 
+      
+      <!-- Custom styles for kontakt -->
+    <link href="./res/css/kontakt.css" rel="stylesheet">  
+    
+
+  </head>
+  <body id="page-top" data-spy="scroll" data-target="#mainNav" data-offset="70">
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" 
+         id="mainNav">
+      <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="index.html">
+              <img src="./img/logo_male.png" class="logo-image"/>
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#onas">O nas
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sluzby.html">Sluzby</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Kontakt</a>
+            </li>
+        
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <a class="anchor" id="basic"></a>
+   
+    <main role="main">
+        
+        <a class="anchor" id="basic"></a>
+        <a class="anchor" id="adresa"></a>
+        <div class="row">
+           <div class="card col-lg-3">
+             
+            <div class="card-header">
+                Základne info
+              </div>
+              <div class="card-body">
+                Telefón: 0917 135 484   
+              </div>
+               <div class="card-body">
+                Email: <a href="mailto:kostkova123@gmail.com">kostkova123@gmail.com</a>
+              </div>
+               <div class="card-body">
+                Facebook: <a href="https://www.facebook.com/Pilatesrehab-480819508953074/">pilatesrehab</a>   
+              </div>
+            </div>
+            <div class="card col-lg-9">
+              <div class="card-header">
+                Adresa
+                </div>
+              <div class="card-body">
+                  <div class="card-text bold">
+                      Navštívte nás osobne na tejto adrese
+                  </div>  
+                <p>       
+                   <div class="card-text">
+                      Štefániková 38/A
+                    </div>
+                    <div class="card-text">
+                      Spišská Belá
+                    </div>
+                </p>      
+                  
+                <div id="map"></div>  
+              </div>
+                
+            </div>
+        </div>       
+    </main>
+       
+   
+    <footer> 
+        <a class="anchor" id="contact"></a>
+ <!-- footer Content -->
+        <section class="py-5">
+          <div class="container">
+            <h1>Ako nas skontaktujete?</h1>
+            <p>Nas email: cbsdkahk@jsdlkahdjk.sk</p>
+            <p>Pjosim volajte na: 923842983478926</p> 
+          </div>
+        </section>
+   </footer>     
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./res/vendor/jquery/jquery.min.js"></script>
+    <script src="./res/vendor/popper/popper.min.js"></script>
+    <script src="./res/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="./res/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="./res/js/scrollspy.js"></script> 
+   
+    <script>
+      function initMap() {
+          var pilatesrehab = {lat: 49.1903939, lng: 20.4540061};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 18,
+            center: pilatesrehab
+          });
+          var marker = new google.maps.Marker({
+            position: pilatesrehab,
+            map: map
+          });
+        }
+    </script>  
+    <div w3-include-html="googlemapscript.html"></div> 
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
+  </body>
+</html>

@@ -17,6 +17,9 @@
       
       <!-- Custom styles for menu -->
     <link href="./res/css/menu.css" rel="stylesheet">
+      
+     <!-- Custom styles for footer -->
+    <link href="./res/css/footer.css" rel="stylesheet">   
   </head>
   <body id="page-top" data-spy="scroll" data-target="#mainNav" data-offset="70">
     
@@ -150,17 +153,10 @@
       </div>       
     </main>  
    
-    <footer> 
-        <a class="anchor" id="contact"></a>
- <!-- footer Content -->
-        <section class="py-5">
-          <div class="container">
-            <h1>Ako nas skontaktujete?</h1>
-            <p>Nas email: cbsdkahk@jsdlkahdjk.sk</p>
-            <p>Pjosim volajte na: 923842983478926</p> 
-          </div>
-        </section>
-   </footer> 
+     <footer> 
+       <div w3-include-html="footer-index.html"></div>        
+   </footer>     
+
 
 
     <!-- Bootstrap core JavaScript
@@ -172,5 +168,9 @@
     <script src="./res/vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="./res/js/scrollspy.js"></script>  
     <script src="./res/js/custom-script.js"></script>  
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
   </body>
 </html>

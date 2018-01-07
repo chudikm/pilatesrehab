@@ -21,7 +21,8 @@
       <!-- Custom styles for kontakt -->
     <link href="./res/css/kontakt.css" rel="stylesheet">  
     
-
+     <!-- Custom styles for footer -->
+    <link href="./res/css/footer.css" rel="stylesheet">    
   </head>
   <body id="page-top" data-spy="scroll" data-target="#mainNav" data-offset="70">
     
@@ -55,62 +56,58 @@
     </nav>
     
     <a class="anchor" id="basic"></a>
-   
+    <header>
+        <h1>Kontakt</h1>
+    </header>
     <main role="main">
         
         <a class="anchor" id="basic"></a>
         <a class="anchor" id="adresa"></a>
-        <div class="row">
-           <div class="card col-lg-3">
-             
-            <div class="card-header">
-                Základne info
-              </div>
-              <div class="card-body">
-                Telefón: 0917 135 484   
-              </div>
-               <div class="card-body">
-                Email: <a href="mailto:kostkova123@gmail.com">kostkova123@gmail.com</a>
-              </div>
-               <div class="card-body">
-                Facebook: <a href="https://www.facebook.com/Pilatesrehab-480819508953074/">pilatesrehab</a>   
-              </div>
-            </div>
-            <div class="card col-lg-9">
-              <div class="card-header">
-                Adresa
+        <div class="container">
+            <div class="row">
+               <div class="card col-lg-3">
+
+                <div class="card-header">
+                    Základne info
+                  </div>
+                  <div class="card-body">
+                      <span class="bold">Telefón:</span> 0917 135 484   
+                  </div>
+                   <div class="card-body">
+                       <span class="bold">Email:</span> <a href="mailto:kostkova123@gmail.com">kostkova123@gmail.com</a>
+                  </div>
+                   <div class="card-body">
+                       <span class="bold">Facebook:</span> <a href="https://www.facebook.com/Pilatesrehab-480819508953074/">pilatesrehab</a>   
+                  </div>
                 </div>
-              <div class="card-body">
-                  <div class="card-text bold">
-                      Navštívte nás osobne na tejto adrese
-                  </div>  
-                <p>       
-                   <div class="card-text">
-                      Štefániková 38/A
+                <div class="card col-lg-9">
+                  <div class="card-header">
+                    Adresa
                     </div>
-                    <div class="card-text">
-                      Spišská Belá
-                    </div>
-                </p>      
-                  
-                <div id="map"></div>  
-              </div>
-                
-            </div>
-        </div>       
+                  <div class="card-body">
+                      <div class="card-text bold">
+                          Navštívte nás osobne na tejto adrese
+                      </div>  
+                    <p>       
+                       <div class="card-text">
+                          Štefániková 38/A
+                        </div>
+                        <div class="card-text">
+                          Spišská Belá
+                        </div>
+                    </p>      
+
+                    <div id="map"></div>  
+                  </div>
+
+                </div>
+            </div>  
+        </div>
     </main>
        
    
-    <footer> 
-        <a class="anchor" id="contact"></a>
- <!-- footer Content -->
-        <section class="py-5">
-          <div class="container">
-            <h1>Ako nas skontaktujete?</h1>
-            <p>Nas email: cbsdkahk@jsdlkahdjk.sk</p>
-            <p>Pjosim volajte na: 923842983478926</p> 
-          </div>
-        </section>
+   <footer> 
+       <div w3-include-html="footer-kontakt.html"></div>        
    </footer>     
 
     <!-- Bootstrap core JavaScript
@@ -135,7 +132,9 @@
           });
         }
     </script>  
-    <div w3-include-html="googlemapscript.html"></div> 
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR88hCqPxskgmT4miSFhDU_eUQOiv0s1c&callback=initMap">
+    </script> 
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script>
         w3.includeHTML();

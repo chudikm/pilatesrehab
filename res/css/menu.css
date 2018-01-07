@@ -1,21 +1,21 @@
 
 .navbar{
-    background-color: rgb(255,255,241);
+    background-color: var(--main-background-colour);
     height: 10vh;
 }
 
 .nav-link{
-    color:rgb(127,83,52)!important;
+    color:var(--main-font-colour)!important;
     font-size: 1.2em;
 }
 
 .nav-link:hover{
-    color: rgb(127,83,52);
+    color: var(--main-font-colour);
     font-weight: bold;
 }
 
 .nav-link.active{
-    background-color: rgb(233,227,18);
+    background-color: var(--main-third-colour);
 }
 
 .logo-image{

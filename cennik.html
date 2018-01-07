@@ -19,7 +19,10 @@
     <link href="./res/css/menu.css" rel="stylesheet">  
     
     <!-- Custom styles for menu -->
-    <link href="./res/css/cennik.css" rel="stylesheet">    
+    <link href="./res/css/cennik.css" rel="stylesheet">  
+      
+      <!-- Custom styles for footer -->
+    <link href="./res/css/footer.css" rel="stylesheet">    
   </head>
   <body id="page-top" data-spy="scroll" data-target="#mainNav" data-offset="70">
     
@@ -52,151 +55,143 @@
       </div>
     </nav>
     
-    <a class="anchor" id="onas"></a>
     <header>
         <h1>Cenník služieb</h1>
     </header>
     <main role="main">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col" class="col-6">Názov</th>
-          <th scope="col" class="col-3">Dĺžka trvania</th>
-          <th scope="col" class="col-3">Cena</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="col-6">Vstupné vyšetrenie + cvičenie</td>
-          <td class="col-3">90 min</td>
-          <td class="col-3">28 &euro;</td>
-        </tr>
-        <tr>
-          <td class="col-6">Vstupné vyšetrenie bez cvičenia s konzultáciou</td>
-          <td class="col-3">30 - 40 min</td>
-          <td class="col-3">18 &euro;</td>
-        </tr>
-        <tr>
-          <td class="col-6">Konzultácia tréner alebo iný fyzioterapeut so svojím klientom</td>
-          <td class="col-3">30 min</td>
-          <td class="col-3">40 &euro;</td>
-        </tr>
-      </tbody>
-    </table>
-        
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col" class="col-6">Cvičenie PilatesRehab method</th>
-          <th scope="col" class="col-3"></th>
-          <th scope="col" class="col-3"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="col-6">Individuálna hodina</td>
-          <td class="col-3">50 min</td>
-          <td class="col-3">18 &euro;</td>
-        </tr>
-        <tr>
-          <td class="col-6">Individuálna hodina</td>
-          <td class="col-3">30 min</td>
-          <td class="col-3">13 &euro;</td>
-        </tr>
-        <tr>
-          <td class="col-6">Skupinová hodina</td>
-          <td class="col-3">50 min</td>
-          <td class="col-3">5 &euro;</td>
-        </tr>
-        <tr>
-          <td class="col-6">Zvýhodnený balík cvičení</td>
-          <td class="col-3">50 min</td>
-          <td class="col-3">16 &euro;</td>
-        </tr>
-        <tr>
-          <td class="col-6">( 5 hod. individuálnych cvičení a viac )</td>
-          <td class="col-3">spolu 5 cvičení 50 min</td>
-          <td class="col-3">80 &euro;</td>
-        </tr>
-        <tr>
-          <td class="col-6">Uzavretá skupina 2 osoby</td>
-          <td class="col-3">50 min</td>
-          <td class="col-3">18 &euro;</td>
-        </tr>
-        <tr>
-          <td class="col-6">Uzavretá skupina 3 osoby</td>
-          <td class="col-3">50 min</td>
-          <td class="col-3">21 &euro;</td>
-        </tr>
-        <tr>
-          <td class="col-6">Kombinovaná terapia ( Cvičenie kombinované s masážou alebo mäkkými technikami)</td>
-          <td class="col-3">55 min</td>
-          <td class="col-3">20 &euro;</td>
-        </tr>
-      </tbody>
-    </table> 
-        
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col" class="col-6">Masáže</th>
-          <th scope="col" class="col-3"></th>
-          <th scope="col" class="col-3"></th>
-        </tr>
-      </thead>    
-      <tbody>
-        <tr>
-          <td class="col-6">Klasická masáž</td>
-          <td class="col-3">50 min</td>
-          <td class="col-3">20 &euro;</td>
-        </tr>
-        <tr>
-          <td class="col-6">Klasická masáž</td>
-          <td class="col-3">30 min</td>
-          <td class="col-3">13 &euro;</td>
-        </tr>
-        <tr>
-          <td class="col-6">Lymfodrenáž</td>
-          <td class="col-3">90 min</td>
-          <td class="col-3">27 &euro;</td>
-        </tr>
-        <tr>
-          <td class="col-6">Mäkké techniky</td>
-          <td class="col-3">30 min</td>
-          <td class="col-3">13 &euro;</td>
-        </tr>
-        <tr>
-          <td>Strečing a fasciálna masáž s penovými valcami</td>
-          <td>30 min</td>
-          <td>13 &euro;</td>
-        </tr>
-        <tr>
-          <td>Kineziotaping</td>
-          <td></td>
-          <td>7 &euro;</td>
-        </tr>
-        
-      </tbody>
-    </table>    
+        <div class="container">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col" class="col-6">Názov</th>
+                  <th scope="col" class="col-3">Dĺžka trvania</th>
+                  <th scope="col" class="col-3">Cena</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-6">Vstupné vyšetrenie + cvičenie</td>
+                  <td class="col-3">90 min</td>
+                  <td class="col-3">28 &euro;</td>
+                </tr>
+                <tr>
+                  <td class="col-6">Vstupné vyšetrenie bez cvičenia s konzultáciou</td>
+                  <td class="col-3">30 - 40 min</td>
+                  <td class="col-3">18 &euro;</td>
+                </tr>
+                <tr>
+                  <td class="col-6">Konzultácia tréner alebo iný fyzioterapeut so svojím klientom</td>
+                  <td class="col-3">30 min</td>
+                  <td class="col-3">40 &euro;</td>
+                </tr>
+              </tbody>
+            </table>
 
-    <div class="py-5" style="padding:10px">
-        <p>Zmena cien vyhradená</p>
-        <p>Cenník platný od 1.9.2017</p>
-    </div>    
-        
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col" class="col-6">Cvičenie PilatesRehab method</th>
+                  <th scope="col" class="col-3"></th>
+                  <th scope="col" class="col-3"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-6">Individuálna hodina</td>
+                  <td class="col-3">50 min</td>
+                  <td class="col-3">18 &euro;</td>
+                </tr>
+                <tr>
+                  <td class="col-6">Individuálna hodina</td>
+                  <td class="col-3">30 min</td>
+                  <td class="col-3">13 &euro;</td>
+                </tr>
+                <tr>
+                  <td class="col-6">Skupinová hodina</td>
+                  <td class="col-3">50 min</td>
+                  <td class="col-3">5 &euro;</td>
+                </tr>
+                <tr>
+                  <td class="col-6">Zvýhodnený balík cvičení</td>
+                  <td class="col-3">50 min</td>
+                  <td class="col-3">16 &euro;</td>
+                </tr>
+                <tr>
+                  <td class="col-6">( 5 hod. individuálnych cvičení a viac )</td>
+                  <td class="col-3">spolu 5 cvičení 50 min</td>
+                  <td class="col-3">80 &euro;</td>
+                </tr>
+                <tr>
+                  <td class="col-6">Uzavretá skupina 2 osoby</td>
+                  <td class="col-3">50 min</td>
+                  <td class="col-3">18 &euro;</td>
+                </tr>
+                <tr>
+                  <td class="col-6">Uzavretá skupina 3 osoby</td>
+                  <td class="col-3">50 min</td>
+                  <td class="col-3">21 &euro;</td>
+                </tr>
+                <tr>
+                  <td class="col-6">Kombinovaná terapia ( Cvičenie kombinované s masážou alebo mäkkými technikami)</td>
+                  <td class="col-3">55 min</td>
+                  <td class="col-3">20 &euro;</td>
+                </tr>
+              </tbody>
+            </table> 
+
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col" class="col-6">Masáže</th>
+                  <th scope="col" class="col-3"></th>
+                  <th scope="col" class="col-3"></th>
+                </tr>
+              </thead>    
+              <tbody>
+                <tr>
+                  <td class="col-6">Klasická masáž</td>
+                  <td class="col-3">50 min</td>
+                  <td class="col-3">20 &euro;</td>
+                </tr>
+                <tr>
+                  <td class="col-6">Klasická masáž</td>
+                  <td class="col-3">30 min</td>
+                  <td class="col-3">13 &euro;</td>
+                </tr>
+                <tr>
+                  <td class="col-6">Lymfodrenáž</td>
+                  <td class="col-3">90 min</td>
+                  <td class="col-3">27 &euro;</td>
+                </tr>
+                <tr>
+                  <td class="col-6">Mäkké techniky</td>
+                  <td class="col-3">30 min</td>
+                  <td class="col-3">13 &euro;</td>
+                </tr>
+                <tr>
+                  <td>Strečing a fasciálna masáž s penovými valcami</td>
+                  <td>30 min</td>
+                  <td>13 &euro;</td>
+                </tr>
+                <tr>
+                  <td>Kineziotaping</td>
+                  <td></td>
+                  <td>7 &euro;</td>
+                </tr>
+
+              </tbody>
+            </table>    
+
+            <div class="py-5" style="padding:10px">
+                <p>Zmena cien vyhradená</p>
+                <p>Cenník platný od 1.9.2017</p>
+            </div>    
+        </div>
     </main>
        
    
     <footer> 
-        <a class="anchor" id="contact"></a>
- <!-- footer Content -->
-        <section class="py-5">
-          <div class="container">
-            <h1>Ako nas skontaktujete?</h1>
-            <p>Nas email: cbsdkahk@jsdlkahdjk.sk</p>
-            <p>Pjosim volajte na: 923842983478926</p> 
-          </div>
-        </section>
+       <div w3-include-html="footer.html"></div>        
    </footer>     
 
     <!-- Bootstrap core JavaScript

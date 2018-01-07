@@ -18,7 +18,7 @@
 
 .featurette,.py-5{
     color:rgb(127,83,52)!important;
-    border-top: 2px solid rgb(255,255,241);
+    border-top: 2px solid var(--main-background-colour);
 }
 
 header{
@@ -36,7 +36,7 @@ a.anchor {
 .card{
     height: 400px;
     background-size: 100% 100%;
-    border: 1px solid rgb(255,255,241);
+    border: 1px solid var(--main-background-colour);
     z-index: 1000;
 }
 
@@ -44,20 +44,20 @@ a.anchor {
     height:100%;
     width:100%;
     z-index: 2000;
-    color:rgb(255,255,241)!important;
+    color:var(--main-background-colour)!important;
     font-size: 3em;
    
     
 }
 
 .card p{ 
-    color:rgb(255,255,241)!important;
+    color:var(--main-background-colour)!important;
     font-size: 2em;
 }
 
 .card a.active{
     font-weight: bold;
-    color:rgb(233,227,18)!important;
+    color:var(--main-third-colour)!important;
 }
 
 .card-background{

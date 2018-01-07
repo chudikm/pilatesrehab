@@ -1,14 +1,3 @@
-header{
-  padding-top: 15vh;
-  text-align: center;
-  color: rgb(127,83,52)!important;  
-}
-
-main{
-    padding-top: 2vh;
-    margin: 20px;
-}
-
 .col-6{
     width:50vw;
 }
@@ -26,5 +15,5 @@ main{
 }
 
 .table thead th{
-    border-bottom: 1px solid rgb(233,227,18);
+    border-bottom: 1px solid var(--main-third-colour);
 }

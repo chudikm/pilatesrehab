@@ -1,0 +1,15 @@
+#map{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(255,255,241);
+}
+
+.card-body{
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 0.5rem;
+}
+
+.card-header{
+    text-align: center;
+}

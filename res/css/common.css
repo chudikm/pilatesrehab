@@ -2,51 +2,55 @@
 :root {   
   --font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --main-background-colour: #fef4d9;
+  --main-font-colour: #6e4e3f;    
+  --main-third-colour: #d2c401;
+  --main-fourth-colour: #fef097;    
 }
 
 
 body{
-    background-color: rgb(255,255,241);
+    background-color: var(--main-background-colour);
     font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   
 }
 
 .card{
-   background-color: rgb(255,255,241)!important;
+   background-color: var(--main-background-colour)!important;
    
 }
 
 .card-body{
-    color:rgb(127,83,52)!important;
+    color:var(--main-font-colour)!important;
 }
 
 
 .btn-primary {
-  color: rgb(127,83,52);
-  background-color: rgb(233,227,18);
-  border-color: rgb(233,227,18);
+  color: var(--main-font-colour);
+  background-color: var(--main-fourth-colour);
+  border-color: var(--main-fourth-colour);
 }
 
 .btn-primary:hover, .btn-primary.active,
 .btn-primary:not([disabled]):not(.disabled).active, .btn-primary:not([disabled]):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
-  color: rgb(127,83,52);
-  background-color: rgb(233,200,18);
-  border-color: rgb(233,200,18);;
+  color: var(--main-font-colour);
+  background-color: var(--main-third-colour);
+  border-color: var(--main-third-colour);
 }
 
 
 .py-5{
-    color:rgb(127,83,52)!important;
-    border-top: 2px solid white;
+    color:var(--main-font-colour)!important;
+    border-top: 2px solid var(--main-background-colour);
 }
 
 .featurette{
-    color:rgb(127,83,52)!important;
+    color:var(--main-font-colour)!important;
     
 }
 
 .modal{
-    color:rgb(127,83,52)!important;
+    color:var(--main-font-colour)!important;
 }
 
 .bold {

@@ -21,11 +21,6 @@
     border-top: 2px solid var(--main-background-colour);
 }
 
-header{
-    padding-top: 10vh;
-}
-
-
 a.anchor {
     display: block;
     position: relative;

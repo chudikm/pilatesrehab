@@ -28,3 +28,14 @@ header{
 .row.featurette div{
     background-size: 100% 100%;
 }
+
+.additional_info{
+    font-size: 0.8em;
+    margin-top: 15px;
+    float: right;
+}
+
+button.btn-secondary{
+    background-color: var(--main-third-colour)!important;
+    color: var(--main-font-colour)!important;
+}

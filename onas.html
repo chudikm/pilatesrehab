@@ -37,13 +37,18 @@
            <div class="card col-lg-4">
               <img class="card-img-top" src="./img/studio.jpg" alt="Card image cap">
               <div class="card-body">
-                <h5 class="card-title">Studio</h5>
-                <p class="card-text">Pohybové štúdio je moderné, špecializované štúdio , v Spišskej Belej, kde sa nám podarilo spojiť
-Pilates metódu, s najnovšími poznatkami z fyzioterapie. Vytvorili sme pre Vás , príjemné prostredie ,
-kde sa môžete dokonale sústrediť na prácu s vašimi svalmi , a tým sa dopracovať k lepšiemu držaniu
-tela a k chrbtici bez bolesti . 
+                <h5 class="card-title">Štúdio</h5>
+                <p class="card-text">Pohybové štúdio je moderné a špecializované štúdio v Spišskej Belej, kde sa nám podarilo spojiť
+Pilates metódu s najnovšími poznatkami z fyzioterapie. Vytvorili sme pre Vás  príjemné prostredie,
+kde sa môžete dokonale sústrediť na prácu s vašimi svalmi, a tým sa dopracovať k lepšiemu držaniu tela a k chrbtici bez bolesti . 
+                  </p>
+                <p>   
 Tešíme sa na Vás</p>
-                <a href="poriadok.html">Tu nájdete náš prevádzkový poriadok.</a>
+                <div><a href="#" class="btn btn-primary"  data-toggle="modal" data-target="#studio-info">Pre viac info tu.</a>  
+                  </div>    
+                  <div class="additional_info">
+                      Tu nájdete náš <a href="poriadok.html">prevádzkový poriadok.</a>
+                  </div>    
               </div>
             </div>
             <div class="card col-lg-4">
@@ -75,7 +80,25 @@ Tešíme sa na Vás</p>
        <div w3-include-html="footer.html"></div>        
    </footer>     
 
+<div class="modal fade" id="studio-info" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg"  role="document">
+        <div class="modal-content"> 
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Štúdio PilatesRehab</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div w3-include-html="studio.html"></div> 
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Zavri</button>
+          </div>
+        </div>
+    </div>
 
+</div>  
 
 <div class="modal fade" id="katka-info" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg"  role="document">
@@ -90,7 +113,7 @@ Tešíme sa na Vás</p>
             <div w3-include-html="katka.html"></div> 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Zavri</button>
           </div>
         </div>
     </div>
@@ -110,7 +133,7 @@ Tešíme sa na Vás</p>
             <div w3-include-html="martin.html"></div> 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Zavri</button>
           </div>
         </div>
     </div>

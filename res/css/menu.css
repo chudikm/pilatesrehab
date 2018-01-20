@@ -12,10 +12,12 @@
 .nav-link:hover{
     color: var(--main-font-colour);
     font-weight: bold;
+    font-size: 1.3em;
 }
 
-.nav-link.active{
-    background-color: var(--main-third-colour);
+.nav-link.selected{
+    font-weight: bold;
+    font-size: 1.3em;
 }
 
 .logo-image{

@@ -26,34 +26,10 @@
   </head>
   <body id="page-top" data-spy="scroll" data-target="#mainNav" data-offset="70">
     
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" 
-         id="mainNav">
-      <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="index.html">
-              <img src="./img/logo_male.png" class="logo-image"/>
-          </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#onas">O nas
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sluzby.html">Sluzby</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">Kontakt</a>
-            </li>
-        
-          </ul>
-        </div>
-      </div>
-    </nav>
+   <!-- Navigation -->
+   <div w3-include-html="menu.html"></div>   
+    
+   
     
     <a class="anchor" id="basic"></a>
     <header>
@@ -74,7 +50,7 @@
                       <span class="bold">Telefón:</span> 0917 135 484   
                   </div>
                    <div class="card-body">
-                       <span class="bold">Email:</span> <a href="mailto:kostkova123@gmail.com">kostkova123@gmail.com</a>
+                       <span class="bold">Email:</span> <a href="mailto:kostkova1234@gmail.com">kostkova1234@gmail.com</a>
                   </div>
                    <div class="card-body">
                        <span class="bold">Facebook:</span> <a href="https://www.facebook.com/Pilatesrehab-480819508953074/">pilatesrehab</a>   
@@ -139,5 +115,11 @@
     <script>
         w3.includeHTML();
     </script>
+        <script src="./res/js/menu.js"></script> 
+    <script>
+        $( document ).ready(function() {
+            highlight_menu("menu_kontakt");
+        });
+    </script> 
   </body>
 </html>

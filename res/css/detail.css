@@ -19,6 +19,14 @@ header{
     border-color:  rgba(127,83,52, 0.3);
 }
 
+.card-text{
+    text-align: justify;
+}
+
+.card-main-text{
+    height: 100%;
+}
+
 .row.featurette {
     min-height: 400px;
     padding:10px;
@@ -38,4 +46,32 @@ header{
 button.btn-secondary{
     background-color: var(--main-third-colour)!important;
     color: var(--main-font-colour)!important;
+}
+
+.modal-content{
+    background-color: var(--main-background-colour)!important;
+    padding:10px;
+}
+
+.modal-footer{
+    border-top:1px solid var(--main-fourth-colour);
+}
+
+.modal-header{
+    border-bottom:1px solid var(--main-fourth-colour);
+}
+
+.list-group-item{
+    background-color: var(--main-background-colour);
+    color: var(--main-font-colour);
+    border: 1px solid var(--main-third-colour);
+}
+
+.list-group-item.active{
+    background-color: var(--main-third-colour);
+    border-color: var(--main-third-colour);
+}
+
+.list-group-item:hover{
+    background-color: var(--main-fourth-colour);
 }

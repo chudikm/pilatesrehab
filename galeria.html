@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Pilates Rehab - Galeria</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./res/vendor/bootstrap/bootstrap.min.css"  rel="stylesheet">
+      
+    <!-- common styles for all pages -->
+    <link href="./res/css/common.css" rel="stylesheet">  
+      
+    <!-- Custom styles for this template -->
+    <link href="./res/css/detail.css" rel="stylesheet">
+      
+      <!-- Custom styles for menu -->
+    <link href="./res/css/menu.css" rel="stylesheet">  
+      
+    <!-- Custom styles for footer -->
+    <link href="./res/css/footer.css" rel="stylesheet">   
+      
+      <!-- Custom styles for galeria -->
+    <link href="./res/css/galeria.css" rel="stylesheet">  
+  </head>
+  <body id="page-top" data-spy="scroll" data-target="#mainNav" data-offset="70">
+    
+    <!-- Navigation -->
+    <div w3-include-html="menu.html"></div>   
+    
+    <header>
+        <h1>Naše fotky</h1>
+    </header>
+    <main role="main">
+        <div class="container">
+             <!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column">
+    <img src="galeria/thumb/img_fjords.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="galeria/thumb/img_lights.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="galeria/thumb/img_mountains.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="galeria/thumb/img_nature.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="galeria/full/img_fjords_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="galeria/full/img_lights_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="galeria/full/img_mountains_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="galeria/full/img_nature_wide.jpg" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="galeria/thumb/img_fjords.jpg" onclick="currentSlide(1)" alt="Nature">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="galeria/thumb/img_lights.jpg" onclick="currentSlide(2)" alt="Trolltunga">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="galeria/thumb/img_mountains.jpg" onclick="currentSlide(3)" alt="Mountains">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="galeria/thumb/img_nature.jpg" onclick="currentSlide(4)" alt="Lights">
+    </div>
+  </div>
+</div> 
+        </div>
+    </main>
+       
+   
+    <footer> 
+       <div w3-include-html="footer.html"></div>        
+   </footer>     
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./res/vendor/jquery/jquery.min.js"></script>
+    <script src="./res/vendor/popper/popper.min.js"></script>
+    <script src="./res/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="./res/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="./res/js/scrollspy.js"></script> 
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
+    <script src="./res/js/galeria.js"></script>
+    <script src="./res/js/menu.js"></script>
+      
+    <script>
+        $( document ).ready(function() {
+            highlight_menu("menu_galeria");
+        });
+    </script>   
+  </body>
+</html>

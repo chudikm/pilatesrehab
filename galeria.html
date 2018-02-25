@@ -12,10 +12,7 @@
     <!-- common styles for all pages -->
     <link href="./res/css/common.css" rel="stylesheet">  
       
-    <!-- Custom styles for this template -->
-    <link href="./res/css/detail.css" rel="stylesheet">
-      
-      <!-- Custom styles for menu -->
+    <!-- Custom styles for menu -->
     <link href="./res/css/menu.css" rel="stylesheet">  
       
     <!-- Custom styles for footer -->
@@ -32,79 +29,143 @@
     <header>
         <h1>Naše fotky</h1>
     </header>
-    <main role="main">
-        <div class="container">
-             <!-- Images used to open the lightbox -->
-<div class="row">
-  <div class="column">
-    <img src="galeria/thumb/img_fjords.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="galeria/thumb/img_lights.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="galeria/thumb/img_mountains.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="galeria/thumb/img_nature.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+     
+     <main role="main"> 
+       <div class="container-fluid">         
+        <div class="row featurette">
+          <div class="col-md-6 card" id="image1" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
+              <a href="#" class="card-background"></a>
+              <div class="card-body">
+                <a href="#" ></a>
+                <p class="card-text"></p>
+                 
+              </div>
+          </div>
+            
+          <div class="col-md-6 card" id="image2" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
+              <a href="#" class="card-background"></a>
+              <div class="card-body">
+                <a href="#" ></a>
+                <p class="card-text"></p>
+                 
+              </div>
+          </div>    
+        </div>  
+      
+      
+      
+       <div class="row featurette">
+          <div class="col-md-6 card" id="image3" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
+              <a href="#" class="card-background"></a>
+              <div class="card-body">
+                <a href="#" ></a>
+                <p class="card-text"></p>
+                 
+              </div>
+          </div>
+            
+          <div class="col-md-6 card" id="image4" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
+              <a href="#" class="card-background"></a>
+              <div class="card-body">
+                <a href="#" ></a>
+                <p class="card-text"></p>
+                 
+              </div>
+          </div>   
+        </div>
+           
+           
+        <div class="row featurette">
+          <div class="col-md-6 card" id="image5" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
+              <a href="#" class="card-background"></a>
+              <div class="card-body">
+                <a href="#" ></a>
+                <p class="card-text"></p>
+                 
+              </div>
+          </div>
+            
+          <div class="col-md-6 card" id="image6" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
+              <a href="#" class="card-background"></a>
+              <div class="card-body">
+                <a href="#" ></a>
+                <p class="card-text"></p>
+                 
+              </div>
+          </div>   
+        </div>
+         
+        <div class="row featurette">
+          <div class="col-md-6 card" id="image7" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
+              <a href="#" class="card-background"></a>
+              <div class="card-body">
+                <a href="#" ></a>
+                <p class="card-text"></p>
+                 
+              </div>
+          </div>
+            
+          <div class="col-md-6 card" id="image8" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
+              <a href="#" class="card-background"></a>
+              <div class="card-body">
+                <a href="#" ></a>
+                <p class="card-text"></p>
+                 
+              </div>
+          </div>   
+        </div> 
+           
+        <div class="row featurette">
+          <div class="col-md-6 card" id="image9" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
+              <a href="#" class="card-background"></a>
+              <div class="card-body">
+                <a href="#" ></a>
+                <p class="card-text"></p>
+                 
+              </div>
+          </div>
+            
+          <div class="col-md-6 card" id="image10" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
+              <a href="#" class="card-background"></a>
+              <div class="card-body">
+                <a href="#" ></a>
+                <p class="card-text"></p>
+                 
+              </div>
+          </div>   
+        </div>   
+           
+      </div>  
+         
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#galeria_modal">
+          Launch demo modal
+      </button>
+     
+    </main>  
+      
+    
+      <!-- Modal -->
+<div class="modal fade" id="galeria_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+       <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img id="galeria_modal_image" src="./galeria/full/loading.gif"/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>    
+     
+    </div>
   </div>
 </div>
-
-<!-- The Modal/Lightbox -->
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-
-    <div class="mySlides">
-      <div class="numbertext">1 / 4</div>
-      <img src="galeria/full/img_fjords_wide.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">2 / 4</div>
-      <img src="galeria/full/img_lights_wide.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 4</div>
-      <img src="galeria/full/img_mountains_wide.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">4 / 4</div>
-      <img src="galeria/full/img_nature_wide.jpg" style="width:100%">
-    </div>
-
-    <!-- Next/previous controls -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <!-- Caption text -->
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-    <!-- Thumbnail image controls -->
-    <div class="column">
-      <img class="demo" src="galeria/thumb/img_fjords.jpg" onclick="currentSlide(1)" alt="Nature">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="galeria/thumb/img_lights.jpg" onclick="currentSlide(2)" alt="Trolltunga">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="galeria/thumb/img_mountains.jpg" onclick="currentSlide(3)" alt="Mountains">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="galeria/thumb/img_nature.jpg" onclick="currentSlide(4)" alt="Lights">
-    </div>
-  </div>
-</div> 
-        </div>
-    </main>
-       
+     
    
     <footer> 
        <div w3-include-html="footer.html"></div>        

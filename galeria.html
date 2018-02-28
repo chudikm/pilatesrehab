@@ -18,154 +18,27 @@
     <!-- Custom styles for footer -->
     <link href="./res/css/footer.css" rel="stylesheet">   
       
-      <!-- Custom styles for galeria -->
+    <!-- Custom styles for galeria -->
     <link href="./res/css/galeria.css" rel="stylesheet">  
+    
+     <!-- Custom styles for ekko-lightbox -->
+    <link href="./res/vendor/ekko-lightbox/ekko-lightbox.css" rel="stylesheet">  
   </head>
   <body id="page-top" data-spy="scroll" data-target="#mainNav" data-offset="70">
     
     <!-- Navigation -->
     <div w3-include-html="menu.html"></div>   
-    
-    <header>
-        <h1>Naše fotky</h1>
-    </header>
+
      
-     <main role="main"> 
-       <div class="container-fluid">         
-        <div class="row featurette">
-          <div class="col-md-6 card" id="image1" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
-              <a href="#" class="card-background"></a>
-              <div class="card-body">
-                <a href="#" ></a>
-                <p class="card-text"></p>
-                 
-              </div>
-          </div>
-            
-          <div class="col-md-6 card" id="image2" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
-              <a href="#" class="card-background"></a>
-              <div class="card-body">
-                <a href="#" ></a>
-                <p class="card-text"></p>
-                 
-              </div>
-          </div>    
-        </div>  
-      
-      
-      
-       <div class="row featurette">
-          <div class="col-md-6 card" id="image3" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
-              <a href="#" class="card-background"></a>
-              <div class="card-body">
-                <a href="#" ></a>
-                <p class="card-text"></p>
-                 
-              </div>
-          </div>
-            
-          <div class="col-md-6 card" id="image4" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
-              <a href="#" class="card-background"></a>
-              <div class="card-body">
-                <a href="#" ></a>
-                <p class="card-text"></p>
-                 
-              </div>
-          </div>   
-        </div>
-           
-           
-        <div class="row featurette">
-          <div class="col-md-6 card" id="image5" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
-              <a href="#" class="card-background"></a>
-              <div class="card-body">
-                <a href="#" ></a>
-                <p class="card-text"></p>
-                 
-              </div>
-          </div>
-            
-          <div class="col-md-6 card" id="image6" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
-              <a href="#" class="card-background"></a>
-              <div class="card-body">
-                <a href="#" ></a>
-                <p class="card-text"></p>
-                 
-              </div>
-          </div>   
-        </div>
+   <main role="main"> 
          
-        <div class="row featurette">
-          <div class="col-md-6 card" id="image7" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
-              <a href="#" class="card-background"></a>
-              <div class="card-body">
-                <a href="#" ></a>
-                <p class="card-text"></p>
-                 
-              </div>
-          </div>
-            
-          <div class="col-md-6 card" id="image8" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
-              <a href="#" class="card-background"></a>
-              <div class="card-body">
-                <a href="#" ></a>
-                <p class="card-text"></p>
-                 
-              </div>
-          </div>   
-        </div> 
-           
-        <div class="row featurette">
-          <div class="col-md-6 card" id="image9" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
-              <a href="#" class="card-background"></a>
-              <div class="card-body">
-                <a href="#" ></a>
-                <p class="card-text"></p>
-                 
-              </div>
-          </div>
-            
-          <div class="col-md-6 card" id="image10" style="background-image: url(&#39;./galeria/full/loading.gif&#39;)">
-              <a href="#" class="card-background"></a>
-              <div class="card-body">
-                <a href="#" ></a>
-                <p class="card-text"></p>
-                 
-              </div>
-          </div>   
-        </div>   
-           
-      </div>  
-         
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#galeria_modal">
-          Launch demo modal
-      </button>
-     
+    <div class="row justify-content-center">
+        <div class="col-md-8" id="obrazky_galeria">
+        </div>
+    </div>      
+ 
     </main>  
       
-    
-      <!-- Modal -->
-<div class="modal fade" id="galeria_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <img id="galeria_modal_image" src="./galeria/full/loading.gif"/>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>    
-     
-    </div>
-  </div>
-</div>
-     
    
     <footer> 
        <div w3-include-html="footer.html"></div>        
@@ -183,7 +56,6 @@
     <script>
         w3.includeHTML();
     </script>
-    <script src="./res/js/galeria.js"></script>
     <script src="./res/js/menu.js"></script>
       
     <script>
@@ -191,5 +63,9 @@
             highlight_menu("menu_galeria");
         });
     </script>   
+    <script src="./res/vendor/ekko-lightbox/ekko-lightbox.min.js"></script>  
+    <script src="./res/vendor/ekko-lightbox/ekko-lightbox.min.js.map"></script>  
+    <script src="./res/js/galeria.js"></script>
+        
   </body>
 </html>

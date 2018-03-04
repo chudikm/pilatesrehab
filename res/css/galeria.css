@@ -112,3 +112,8 @@ a .img-fluid {
     margin:auto;
 }
 
+button.btn-secondary{
+    background-color: var(--main-third-colour)!important;
+    color: var(--main-font-colour)!important;
+}
+

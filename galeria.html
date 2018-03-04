@@ -26,17 +26,31 @@
   </head>
   <body id="page-top" data-spy="scroll" data-target="#mainNav" data-offset="70">
     
+    
     <!-- Navigation -->
     <div w3-include-html="menu.html"></div>   
 
-     
    <main role="main"> 
-         
+    <div id="galeria_loading" class="loading_panel">
+        <img src="./img/loader.svg"/>
+    </div>  
+    
+       <div class="row justify-content-center">  
+            <div class="btn-group" role="group" aria-label="Basic example">
+               <button type="button" class="btn btn-secondary" data-tag="ALL">Všetky</button> 
+               <button type="button" class="btn btn-secondary" data-tag="My">O nas</button>
+               <button type="button" class="btn btn-secondary" data-tag="Cviky">Cviky</button>
+               <button type="button" class="btn btn-secondary" data-tag="Studio">Studio</button>
+            </div>
+       </div>
+   
     <div class="row justify-content-center">
         <div class="col-md-8" id="obrazky_galeria">
         </div>
     </div>      
  
+    <input type="hidden" id="tag" value=""/>
+    <input type="hidden" id="sort" value=""/> 
     </main>  
       
    

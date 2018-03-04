@@ -1,23 +1,11 @@
 $( document ).ready(function() {
-    var dataToPost = {
-        "payload" : {
-            "sortBy" : "date"
-        }
-    }
-    $.ajax({
-        type: 'POST',
-        url: 'https://4e392y3tu3.execute-api.eu-west-1.amazonaws.com/dev/PR_readTags',
-        crossDomain: true,
-        data: JSON.stringify(dataToPost),
-        dataType: 'json',
-        success: function( data, status, jqXHR){
-            console.log(data);
-            processResponse(data);
-        },
-        error: function (responseData, textStatus, errorThrown) {
-            console.log('POST failed.');
-        }
+   
     
+    loadGallery();
+    
+    $("button").on('click', function(event){
+       $("#tag").attr('value',event.currentTarget.dataset["tag"]);
+       loadGallery();    
     });
         
     function processResponse(data){
@@ -41,29 +29,63 @@ $( document ).ready(function() {
             aElem.href = "./galeria/full/"+data.Items[i].ImageName;
             aElem.setAttribute("data-toggle","lightbox");
             aElem.setAttribute("data-gallery","pilatesRehab");
+            aElem.setAttribute("data-title",data.Items[i].Title);
+            aElem.setAttribute("data-footer",data.Items[i].Description);
             
             var imgElem =  document.createElement("img");
             aElem.appendChild(imgElem);
             imgElem.src = "./galeria/thumb/"+data.Items[i].ImageName;
             imgElem.className = "img-fluid";
             
-           // $("#image"+(i+1)+" img").attr("src","./galeria/thumb/"+data.Items[i].ImageName);
-          //  $("#image"+(i+1)).attr("href","./galeria/full/"+data.Items[i].ImageName);
-
         }
     }
     
-}); 
+    function loadGallery(){
+        
+        $("#galeria_loading").show();
+        var myNode = document.getElementById("obrazky_galeria");
+        while (myNode.firstChild) {
+            myNode.removeChild(myNode.firstChild);
+        }
+        
+       
+        
+         var dataToPost = {
+            "payload" : {
+                "sortBy" : "date"
+            }
+        }
+         
+         if($("#tag").attr('value') !=undefined){
+            dataToPost.payload.tag = $("#tag").attr('value');
+        } 
+        
+        $.ajax({
+        type: 'POST',
+        url: 'https://2jm70ks4vj.execute-api.eu-west-1.amazonaws.com/dev/PR_readGallery',
+        crossDomain: true,
+        data: JSON.stringify(dataToPost),
+        dataType: 'json',
+        success: function( data, status, jqXHR){
+            console.log(data);
+            processResponse(data);
+            $("#galeria_loading").hide();
+        },
+        error: function (responseData, textStatus, errorThrown) {
+            console.log('POST failed.');
+        }
+    
+    });
+    }
+    
+});
+
+
 
 $(document).on('click', '[data-toggle="lightbox"]', function(event) {
                 event.preventDefault();
                 $(this).ekkoLightbox({
-                    alwaysShowClose: true,
-                    onShown: function() {
-                        console.log('Checking our the events huh?');
-                    },
-                    onNavigate: function(direction, itemIndex){
-                        console.log('Navigating '+direction+'. Current item: '+itemIndex);
-                    }
+                    alwaysShowClose: true
+  
                 });
 });

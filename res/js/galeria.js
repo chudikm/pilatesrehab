@@ -2,11 +2,10 @@ $( document ).ready(function() {
    
     
     loadGallery();
+    loadTags();
     
-    $("button").on('click', function(event){
-       $("#tag").attr('value',event.currentTarget.dataset["tag"]);
-       loadGallery();    
-    });
+    $("button").on('click', processTagFilterClick);
+    
         
     function processResponse(data){
         console.log("Count:" + data.Count);
@@ -42,40 +41,80 @@ $( document ).ready(function() {
     
     function loadGallery(){
         
-        $("#galeria_loading").show();
-        var myNode = document.getElementById("obrazky_galeria");
-        while (myNode.firstChild) {
-            myNode.removeChild(myNode.firstChild);
-        }
-        
-       
-        
-         var dataToPost = {
-            "payload" : {
-                "sortBy" : "date"
+            $("#galeria_loading").show();
+            var myNode = document.getElementById("obrazky_galeria");
+            while (myNode.firstChild) {
+                myNode.removeChild(myNode.firstChild);
             }
-        }
-         
-         if($("#tag").attr('value') !=undefined){
-            dataToPost.payload.tag = $("#tag").attr('value');
-        } 
-        
-        $.ajax({
-        type: 'POST',
-        url: 'https://2jm70ks4vj.execute-api.eu-west-1.amazonaws.com/dev/PR_readGallery',
-        crossDomain: true,
-        data: JSON.stringify(dataToPost),
-        dataType: 'json',
-        success: function( data, status, jqXHR){
-            console.log(data);
-            processResponse(data);
-            $("#galeria_loading").hide();
-        },
-        error: function (responseData, textStatus, errorThrown) {
-            console.log('POST failed.');
-        }
+
+
+
+             var dataToPost = {
+                "payload" : {
+                    "sortBy" : "date"
+                }
+            }
+
+             if($("#tag").attr('value') !=undefined){
+                dataToPost.payload.tag = $("#tag").attr('value');
+            } 
+
+            $.ajax({
+            type: 'POST',
+            url: 'https://2jm70ks4vj.execute-api.eu-west-1.amazonaws.com/dev/PR_readGallery',
+            crossDomain: true,
+            data: JSON.stringify(dataToPost),
+            dataType: 'json',
+            success: function( data, status, jqXHR){
+                console.log(data);
+                processResponse(data);
+                $("#galeria_loading").hide();
+            },
+            error: function (responseData, textStatus, errorThrown) {
+                console.log('POST failed.');
+            }
+
+        });
+    }
     
-    });
+    function loadTags(){
+        
+
+            $.ajax({
+            type: 'GET',
+            url: 'https://4e392y3tu3.execute-api.eu-west-1.amazonaws.com/dev/PR_readTags',
+            crossDomain: true,
+            dataType: 'json',
+            success: function( data, status, jqXHR){
+                console.log(data);
+                processTagResponse(data);
+            },
+            error: function (responseData, textStatus, errorThrown) {
+                console.log('GET failed.');
+            }
+
+        });
+        
+        
+    }
+    
+    function processTagResponse(data){
+        var button;
+        var divTags = document.getElementById("tags");
+        for(i=0;i<data.Count; i++){   
+            button = document.createElement("button");
+            divTags.appendChild(button);
+            button.className="btn btn-secondary";
+            button.setAttribute("type","button");
+            button.setAttribute("data-tag",data.Items[i].Tag);
+            button.innerHTML=data.Items[i].Value;
+            button.onclick = processTagFilterClick;
+        }
+    }
+    
+    function processTagFilterClick(event){
+        $("#tag").attr('value',event.currentTarget.dataset["tag"]);
+        loadGallery();    
     }
     
 });

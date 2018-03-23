@@ -25,7 +25,7 @@ $( document ).ready(function() {
             aElem.id = "image"+(i+1);
             
             aElem.className = "col-sm-4";
-            aElem.href = "./galeria/full/"+data.Items[i].ImageName;
+            aElem.href = "http://pilatesrehab-galeria.s3-website-eu-west-1.amazonaws.com/F/"+data.Items[i].ImageName;
             aElem.setAttribute("data-toggle","lightbox");
             aElem.setAttribute("data-gallery","pilatesRehab");
             aElem.setAttribute("data-title",data.Items[i].Title);
@@ -33,7 +33,7 @@ $( document ).ready(function() {
             
             var imgElem =  document.createElement("img");
             aElem.appendChild(imgElem);
-            imgElem.src = "./galeria/thumb/"+data.Items[i].ImageName;
+            imgElem.src = "http://pilatesrehab-galeria.s3-website-eu-west-1.amazonaws.com/T/"+data.Items[i].ImageName;
             imgElem.className = "img-fluid";
             
         }

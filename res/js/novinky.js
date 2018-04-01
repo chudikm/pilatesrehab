@@ -1,5 +1,7 @@
 $( document ).ready(function() {
    
+    var converter = new showdown.Converter();
+
     
     loadNovinky();
     
@@ -39,13 +41,13 @@ $( document ).ready(function() {
         
         var pTitle = document.createElement("p");
         pTitle.className="card-title";
-        pTitle.innerHTML = dataItem.Title;
+        pTitle.innerText = dataItem.Title;
         
         divMainText.appendChild(pTitle);
         
         var pText = document.createElement("p");
         pText.className="card-text";
-        pText.textContent = dataItem.Text;
+        pText.innerHTML = converter.makeHtml(dataItem.Text);
         
         divMainText.appendChild(pText);
         

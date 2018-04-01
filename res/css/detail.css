@@ -17,6 +17,16 @@ header{
     padding: 10px;
     border-radius: 0.40em;
     border-color:  rgba(127,83,52, 0.3);
+    
+}
+
+.center{
+    align-items: center;
+}
+
+.card-img-top{
+    max-width: 400px;
+    max-height: 600px;
 }
 
 .card-text{

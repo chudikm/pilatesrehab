@@ -22,5 +22,6 @@
 }
 
 img{
-   max-height: 200px; 
+   max-height: 200px !important;
+   max-width: 300px !important;   
 }

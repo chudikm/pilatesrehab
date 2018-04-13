@@ -64,11 +64,11 @@ button.btn-secondary{
 }
 
 .modal-footer{
-    border-top:1px solid var(--main-fourth-colour);
+    border-top:1px solid var(--main-background-colour);
 }
 
 .modal-header{
-    border-bottom:1px solid var(--main-fourth-colour);
+    border-bottom:1px solid var(--main-backgorund-colour);
 }
 
 .list-group-item{

@@ -28,13 +28,15 @@ $( document ).ready(function() {
         
         
         var divCardBody = document.createElement("div");
-        var divImg = document.createElement("div");
-        divImg.className= leftImage? "card-body-img-left" : "card-body-img-right";
-        
-        var imgElem =  document.createElement("img");
-        imgElem.src = "http://pilatesrehab-galeria.s3-website-eu-west-1.amazonaws.com/T2x3/"+dataItem.ImageName;
-        divImg.appendChild(imgElem);
-        divCardBody.appendChild(divImg);
+        if(undefined != dataItem.ImageName && dataItem.ImageName.length>0){
+            var divImg = document.createElement("div");
+            divImg.className= leftImage ? "card-body-img-left" : "card-body-img-right";
+
+            var imgElem =  document.createElement("img");
+            imgElem.src = "http://pilatesrehab-galeria.s3-website-eu-west-1.amazonaws.com/T2x3/"+dataItem.ImageName;
+            divImg.appendChild(imgElem);
+            divCardBody.appendChild(divImg);
+        }
         
         var divMainText = document.createElement("div");
         divMainText.className = "card-main-text";

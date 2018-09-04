@@ -39,24 +39,23 @@ a.anchor {
     height:100%;
     width:100%;
     z-index: 2000;
-    color:var(--main-third-colour)!important;
+    color:var(--main-background-colour)!important;
     font-size: 3em;
      
 }
 
 .card p{ 
-    color:var(--main-third-colour)!important;
+    color:var(--main-background-colour)!important;
     font-size: 2em;
 }
 
 .card a.active{
     font-weight: bold;
-    color:var(--main-font-colour)!important;
+    
 }
 
 .card-text.active{
-
-    color:var(--main-font-colour)!important;
+    font-weight: bold;
 }
 
 .card-background{
@@ -69,20 +68,16 @@ a.anchor {
     max-height: 150px;
     text-align: center;
    
-
 }
 
-.card-body.active{
-  background-color: lightgray;
-  opacity: 0.7;
-  filter: alpha(opacity=70); /* For IE8 and earlier */
-  
-
-}
 
 .carousel-control-next:hover, .carousel-control-prev:hover{
     background-color: lightgrey;
     opacity: 0.5;
     filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.carousel-caption{
+    color: var(--main-background-colour)!important;
 }
 

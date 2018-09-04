@@ -115,5 +115,6 @@ a .img-fluid {
 button.btn-secondary{
     background-color: var(--main-third-colour)!important;
     color: var(--main-font-colour)!important;
+    cursor: pointer;
 }
 

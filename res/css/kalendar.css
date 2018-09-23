@@ -1,0 +1,18 @@
+#kalendar_dni{
+    display: block;
+    float: left;
+    width: 10%;
+    min-width: 120px;
+}
+
+#kalendar_bloky{
+    width: 90%;
+}
+
+.row{
+    height:100px
+}
+
+.col-sm{
+    padding: 5px;
+}

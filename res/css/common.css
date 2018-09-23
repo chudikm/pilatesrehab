@@ -57,6 +57,10 @@ body{
     font-weight: bold;
 }
 
+.center {
+    text-align: center;
+}
+
 .loading_panel{
     position: fixed;
     display: -ms-flexbox;

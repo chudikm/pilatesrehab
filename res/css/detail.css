@@ -53,9 +53,12 @@ header{
 }
 
 .additional_info{
-    font-size: 0.8em;
     margin-top: 15px;
     float: right;
+}
+
+.small_font {
+     font-size: 0.8em;
 }
 
 button.btn-secondary{

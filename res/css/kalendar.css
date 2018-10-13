@@ -1,18 +1,25 @@
-#kalendar_dni{
-    display: block;
-    float: left;
-    width: 10%;
-    min-width: 120px;
-}
-
-#kalendar_bloky{
-    width: 90%;
-}
-
 .row{
-    height:100px
+    height:90px
 }
 
 .col-sm{
-    padding: 5px;
+    padding: 10px;
+    border: dotted 1px;
+    text-align: center;
 }
+
+.col-sm.header{
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+.skupinove{
+    background-color:var(--main-third-colour)!important;
+}
+.individualne{
+    background-color:var(--main-fourth-colour)!important;
+}
+.detska{
+    background-color:var(--main-fifth-colour)!important;
+}
+

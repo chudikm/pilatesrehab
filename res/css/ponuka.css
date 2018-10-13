@@ -1,9 +1,24 @@
+.card-title{
+    height: 7vh;
+}
 
-.card img{
-    float: left;
+.card img{ 
     margin-right: 20px;
 }
 
 .card{
     display:block;
+}
+
+.left-section{
+    float: left;
+    height: 100%;
+}
+
+.left-section img{
+    margin-top: 20px;
+}
+
+.left-section div{
+    padding-top: 20px;
 }

@@ -1,9 +1,7 @@
 $( document ).ready(function() {
    
-    
-    loadGallery();
     loadTags();
-    
+     
     $("button").on('click', processTagFilterClick);
     
         
@@ -12,13 +10,20 @@ $( document ).ready(function() {
         console.log("Items:" + data.Items[0].Title);
         
         var divRow;
-        var divObrazkyGaleria = document.getElementById("obrazky_galeria");
-        for(i=0;i<data.Count; i++){
-            if(i % 3 == 0){
+        var tagContainer;
+        var tagContainerCount;
+        var tagRowMap = new Object();
+        for(var i=0;i<data.Count; i++){
+            
+            tagContainer = findTagContainer(data.Items[i].Tag);
+            tagContainerCount = Number(tagContainer.getAttribute("data-gallery-count"));
+            if(tagContainerCount % 3 == 0){
                 divRow = document.createElement("div");
-                divObrazkyGaleria.appendChild(divRow)
+                tagContainer.appendChild(divRow)
                 divRow.className = "row";
+                tagRowMap[data.Items[i].Tag] = divRow;
             }
+            divRow = tagRowMap[data.Items[i].Tag];
             
             var aElem = document.createElement("a");
             divRow.appendChild(aElem);
@@ -36,26 +41,34 @@ $( document ).ready(function() {
             imgElem.src = "http://pilatesrehab-galeria.s3-website-eu-west-1.amazonaws.com/T/"+data.Items[i].ImageName;
             imgElem.className = "img-fluid";
             
+            tagContainer.setAttribute("data-gallery-count", tagContainerCount + 1); 
+            
         }
+    }
+    
+    function findTagContainer(tagName){
+        var tagContainers = $(".tag-container");
+        for(var j=0;j<tagContainers.length;j++){
+            if(tagContainers[j].getAttribute("data-gallery-tag") == tagName){
+                return tagContainers[j];
+            }
+        }
+        return document.getElementById("obrazky_galeria");
+            
     }
     
     function loadGallery(){
         
             $("#galeria_loading").show();
-            var myNode = document.getElementById("obrazky_galeria");
-            while (myNode.firstChild) {
-                myNode.removeChild(myNode.firstChild);
-            }
-
-
-
-             var dataToPost = {
+            cleanTagContainers();
+        
+            var dataToPost = {
                 "payload" : {
                     "sortBy" : "date"
                 }
             }
 
-             if($("#tag").attr('value') !=undefined){
+            if($("#tag").attr('value') !=undefined){
                 dataToPost.payload.tag = $("#tag").attr('value');
             } 
 
@@ -77,6 +90,30 @@ $( document ).ready(function() {
         });
     }
     
+    function cleanTagContainers(){
+        var tagContainers = $(".tag-container");
+        for(var j=0;j<tagContainers.length;j++){
+            tagContainers[j].setAttribute("data-gallery-count", 0);
+            var children = tagContainers[j].children;
+            for(var z=children.length-1; z >= 0; z--){
+                if(!children[z].classList.contains("tag-name")){
+                    tagContainers[j].removeChild(children[z]);
+                }
+            }
+            if($("#tag").attr('value') == "ALL"){
+               tagContainers[j].style.display="block";
+            }else{
+                if(tagContainers[j].getAttribute("data-gallery-tag") == $("#tag").attr('value')){
+                    tagContainers[j].style.display="block";
+                }else{
+                    tagContainers[j].style.display="none";
+                }
+
+            }
+
+        }
+    }
+    
     function loadTags(){
         
 
@@ -88,6 +125,7 @@ $( document ).ready(function() {
             success: function( data, status, jqXHR){
                 console.log(data);
                 processTagResponse(data);
+                loadGallery();
             },
             error: function (responseData, textStatus, errorThrown) {
                 console.log('GET failed.');
@@ -99,8 +137,13 @@ $( document ).ready(function() {
     }
     
     function processTagResponse(data){
+        data.Items.sort(function(a, b){return a.Order - b.Order});
         var button;
+        var tagContainer;
+        var tagRow;
         var divTags = document.getElementById("tags");
+        var divObrazkyGaleria = document.getElementById("obrazky_galeria");
+        
         for(i=0;i<data.Count; i++){   
             button = document.createElement("button");
             divTags.appendChild(button);
@@ -109,6 +152,20 @@ $( document ).ready(function() {
             button.setAttribute("data-tag",data.Items[i].Tag);
             button.innerHTML=data.Items[i].Value;
             button.onclick = processTagFilterClick;
+            
+            tagContainer = document.createElement("div");
+            divObrazkyGaleria.appendChild(tagContainer);
+            tagContainer.className = "tag-container"
+            tagContainer.setAttribute("data-gallery-tag", data.Items[i].Tag);
+            tagContainer.setAttribute("data-gallery-count", 0);
+            
+            tagRow = document.createElement("div");
+            tagContainer.appendChild(tagRow);
+            tagRow.className = "row tag-name";
+            tagRow.innerHTML = data.Items[i].Value; 
+            
+            
+            
         }
     }
     

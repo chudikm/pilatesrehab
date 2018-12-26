@@ -10,9 +10,9 @@
 }
 
 .nav-link:hover{
-    color: var(--main-font-colour);
-    font-weight: bold;
-    font-size: 1.3em;
+    color: var(--main-font-colour) !important;
+    font-weight: bold !important;
+    font-size: 1.2em !important;
 }
 
 .nav-link.selected{

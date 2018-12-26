@@ -1,9 +1,6 @@
 $( document ).ready(function() {
    
     loadTags();
-     
-    $("button").on('click', processTagFilterClick);
-    
         
     function processResponse(data){
         console.log("Count:" + data.Count);
@@ -138,39 +135,49 @@ $( document ).ready(function() {
     
     function processTagResponse(data){
         data.Items.sort(function(a, b){return a.Order - b.Order});
-        var button;
+        var liElem;
+        var aElem;
         var tagContainer;
         var tagRow;
         var divTags = document.getElementById("tags");
         var divObrazkyGaleria = document.getElementById("obrazky_galeria");
         
         for(i=0;i<data.Count; i++){   
-            button = document.createElement("button");
-            divTags.appendChild(button);
-            button.className="btn btn-secondary";
-            button.setAttribute("type","button");
-            button.setAttribute("data-tag",data.Items[i].Tag);
-            button.innerHTML=data.Items[i].Value;
-            button.onclick = processTagFilterClick;
             
+            liElem = document.createElement("li");
+            divTags.appendChild(liElem);
+            liElem.className = "nav-item";
+             
+            aElem =  document.createElement("a");
+            liElem.appendChild(aElem);
+            aElem.className = "nav-link";
+            aElem.setAttribute("data-toggle","tab");
+            aElem.href = "#";
+            aElem.innerHTML = data.Items[i].Value;
+            aElem.setAttribute("data-tag",data.Items[i].Tag);
+
+
             tagContainer = document.createElement("div");
             divObrazkyGaleria.appendChild(tagContainer);
             tagContainer.className = "tag-container"
             tagContainer.setAttribute("data-gallery-tag", data.Items[i].Tag);
             tagContainer.setAttribute("data-gallery-count", 0);
-            
+
             tagRow = document.createElement("div");
             tagContainer.appendChild(tagRow);
             tagRow.className = "row tag-name";
             tagRow.innerHTML = data.Items[i].Value; 
-            
-            
-            
+  
         }
+        
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+           
+            processTagFilterClick(e.target)
+        })
     }
     
-    function processTagFilterClick(event){
-        $("#tag").attr('value',event.currentTarget.dataset["tag"]);
+    function processTagFilterClick(element){
+        $("#tag").attr('value',element.dataset["tag"]);
         loadGallery();    
     }
     

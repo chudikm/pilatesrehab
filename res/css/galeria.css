@@ -131,3 +131,22 @@ button.btn-secondary{
     color: var(--main-font-colour)!important;
 }
 
+#tags .nav-link{
+    color:  var(--main-font-colour)!important;
+}
+
+#tags .nav-link.active{
+    background-color: var(--main-third-colour)!important;
+    color: var(--main-font-colour)!important;
+    cursor: pointer;
+}
+
+#tags .nav-link:hover {
+    color: var(--main-font-colour) !important;
+    font-weight: bold !important;
+    font-size: 1.2em !important;
+}
+
+.nav-tabs {
+    border-bottom: none !important;
+}

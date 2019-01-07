@@ -1,6 +1,22 @@
-.card-title{
-    height: 7vh;
+@media (min-width: 800px) {
+   .left-section {
+       float: left;
+        height: 100%;
+    } 
+    
+    .card-title{
+       height: 24vh;
+    }
 }
+
+@media (min-width: 990px) {
+    .card-title{
+       height: 7vh;
+    }
+}
+
+
+
 
 .card img{ 
     margin-right: 20px;
@@ -10,14 +26,6 @@
     display:block;
 }
 
-.left-section{
-    float: left;
-    height: 100%;
-}
-
-.left-section img{
-    margin-top: 20px;
-}
 
 .left-section div{
     padding-top: 20px;

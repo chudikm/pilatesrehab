@@ -1,3 +1,11 @@
+
+@media screen and (min-width: 800px) {
+   .card-main-text{
+     height: 70vh;
+   }
+    
+}
+
 main{
     color: rgb(127,83,52)!important;
     margin: 20px;
@@ -21,6 +29,8 @@ header{
 }
 
 
+
+
 .center{
     align-items: center;
 }
@@ -32,10 +42,6 @@ header{
 
 .card-text{
     text-align: justify;
-}
-
-.card-main-text{
-    height: 60vh;
 }
 
 .card-title{

@@ -1,14 +1,41 @@
-.row{
-    height:90px
+@media (min-width: 768px){
+    .col-md-2 {
+        max-width: 15%;
+    }
+    .row{
+        height:140px
+    }
+    
+    .DeskHidden{
+        display: none;
+    }
 }
 
-.col-sm{
+@media (min-width: 992px){
+    
+    .row{
+        height:90px
+    }
+    
+    
+}
+
+@media (max-width: 767px){
+    
+        .MobHidden{
+            display: none;
+        }
+}
+
+
+
+.stlpik{
     padding: 10px;
     border: dotted 1px;
     text-align: center;
 }
 
-.col-sm.header{
+.stlpik.header{
     padding-top: 30px;
     font-weight: bold;
 }

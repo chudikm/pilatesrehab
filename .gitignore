@@ -1,6 +1,7 @@
 galeria/
 
 .DS_Store
+.idea
 
 res/.DS_Store
 

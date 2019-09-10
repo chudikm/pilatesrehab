@@ -50,3 +50,12 @@
     background-color:var(--main-fifth-colour)!important;
 }
 
+.oznam{
+    text-align: center;
+    width: max-content;
+    height: fit-content;
+}
+
+.oznam div{
+    margin: 20px;
+}
